@@ -1,4 +1,5 @@
 import { expect, testStep } from '../../../common/pwHelpers/pw';
+
 export class CreateArticlePage {
   constructor(page, userId = 0) {
     this.page = page;

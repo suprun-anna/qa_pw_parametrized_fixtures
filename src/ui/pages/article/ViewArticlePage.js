@@ -57,4 +57,12 @@ export class ViewArticlePage {
       }
     });
   }
+
+  async assertArticleTagsAreNotVisible(tags) {
+    await this.step(`Assert the article has no tags`, async () => {
+      for (let i = 0; i < tags.length; i++) {
+        await expect(this.tagListItem(tags[i])).not.toBeVisible();
+      }
+    });
+  }
 }
